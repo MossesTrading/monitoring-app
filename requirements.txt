@@ -93,3 +93,5 @@ userpath==1.9.1
 wadllib==1.3.6
 wheel==0.42.0
 zope.interface==6.1
+fastapi==0.95.0
+uvicorn==0.22.0
