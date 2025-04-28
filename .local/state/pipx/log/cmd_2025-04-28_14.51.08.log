@@ -1,0 +1,70 @@
+   421.7ms (setup:858): 2025-04-28 14:51:08
+   421.8ms (setup:859): /usr/bin/pipx install boto3 psutil mysql-connector-python fastapi uvicorn
+   421.9ms (setup:860): pipx version is 1.4.3
+   421.9ms (setup:861): Default python interpreter is '/usr/bin/python3'
+   421.9ms (mkdir:74): creating directory /home/ssm-user/.local/share/pipx/venvs
+   422.0ms (mkdir:74): creating directory /home/ssm-user/.local/bin
+   422.0ms (mkdir:74): creating directory /home/ssm-user/.local/share/man
+   430.4ms (mkdir:74): creating directory /home/ssm-user/.cache/pipx
+   430.6ms (setup:870): Adding CACHEDIR.TAG to cache directory
+   431.7ms (package_name_from_spec:370): Determined package name: boto3
+   431.8ms (package_name_from_spec:371): Package name determined in 0.0s
+   431.8ms (package_name_from_spec:370): Determined package name: psutil
+   431.9ms (package_name_from_spec:371): Package name determined in 0.0s
+   431.9ms (package_name_from_spec:370): Determined package name: mysql-connector-python
+   431.9ms (package_name_from_spec:371): Package name determined in 0.0s
+   432.0ms (package_name_from_spec:370): Determined package name: fastapi
+   432.0ms (package_name_from_spec:371): Package name determined in 0.0s
+   432.0ms (package_name_from_spec:370): Determined package name: uvicorn
+   432.0ms (package_name_from_spec:371): Package name determined in 0.0s
+   432.5ms (run_subprocess:168): running /usr/bin/python3 -m venv --without-pip /home/ssm-user/.local/share/pipx/venvs/boto3
+   509.9ms (run_subprocess:190): stdout:
+   510.0ms (run_subprocess:192): stderr:
+   510.0ms (run_subprocess:193): returncode: 0
+   510.6ms (run_subprocess:168): running /usr/bin/python3 -m venv --clear /home/ssm-user/.local/share/pipx/shared
+  4059.8ms (run_subprocess:190): stdout:
+  4059.9ms (run_subprocess:192): stderr:
+  4059.9ms (run_subprocess:193): returncode: 0
+  4060.3ms (run_subprocess:168): running <checking pip's availability>
+  4084.7ms (run_subprocess:190): stdout: ModuleSpec(name='pip', loader=<_frozen_importlib_external.SourceFileLoader object at 0x70403f503c80>, origin='/home/ssm-user/.local/share/pipx/shared/lib/python3.12/site-packages/pip/__init__.py', submodule_search_locations=['/home/ssm-user/.local/share/pipx/shared/lib/python3.12/site-packages/pip'])
+  4084.8ms (run_subprocess:193): returncode: 0
+  4084.8ms (upgrade:98): Upgrading shared libraries in /home/ssm-user/.local/share/pipx/shared
+  4085.0ms (run_subprocess:168): running /home/ssm-user/.local/share/pipx/shared/bin/python -m pip --no-input --disable-pip-version-check install --force-reinstall -q --upgrade pip >= 23.1
+  5899.6ms (run_subprocess:190): stdout:
+  5899.7ms (run_subprocess:192): stderr:
+  5899.7ms (run_subprocess:193): returncode: 0
+  5900.4ms (run_subprocess:168): running /home/ssm-user/.local/share/pipx/venvs/boto3/bin/python -c import sysconfig; print(sysconfig.get_path('purelib'))
+  5923.2ms (run_subprocess:190): stdout: /home/ssm-user/.local/share/pipx/venvs/boto3/lib/python3.12/site-packages
+  5923.2ms (run_subprocess:193): returncode: 0
+  5923.4ms (run_subprocess:168): running /home/ssm-user/.local/share/pipx/shared/bin/python -c import sysconfig; print(sysconfig.get_path('purelib'))
+  5942.9ms (run_subprocess:190): stdout: /home/ssm-user/.local/share/pipx/shared/lib/python3.12/site-packages
+  5943.0ms (run_subprocess:193): returncode: 0
+  5943.2ms (run_subprocess:168): running /home/ssm-user/.local/share/pipx/venvs/boto3/bin/python --version
+  5945.2ms (run_subprocess:190): stdout: Python 3.12.3
+  5945.3ms (run_subprocess:192): stderr:
+  5945.3ms (run_subprocess:193): returncode: 0
+  5945.5ms (_parsed_package_to_package_or_url:137): cleaned package spec: boto3
+  5945.8ms (run_subprocess:168): running /home/ssm-user/.local/share/pipx/venvs/boto3/bin/python -m pip --no-input install boto3
+  8754.5ms (run_subprocess:193): returncode: 0
+  8755.9ms (run_subprocess:168): running <fetch_info_in_venv commands>
+  8781.6ms (run_subprocess:190): stdout: {"sys_path": ["/usr/lib/python312.zip", "/usr/lib/python3.12", "/usr/lib/python3.12/lib-dynload", "/home/ssm-user/.local/share/pipx/venvs/boto3/lib/python3.12/site-packages", "/home/ssm-user/.local/share/pipx/shared/lib/python3.12/site-packages"], "python_version": "3.12.3", "environment": {"implementation_name": "cpython", "implementation_version": "3.12.3", "os_name": "posix", "platform_machine": "x86_64", "platform_release": "6.8.0-1027-aws", "platform_system": "Linux", "platform_version": "#29-Ubuntu SMP Thu Mar 27 17:28:55 UTC 2025", "python_full_version": "3.12.3", "platform_python_implementation": "CPython", "python_version": "3.12", "sys_platform": "linux"}}
+  8781.6ms (run_subprocess:193): returncode: 0
+  8852.0ms (get_venv_metadata_for_package:339): get_venv_metadata_for_package: 96ms
+  8852.1ms (_parsed_package_to_package_or_url:137): cleaned package spec: boto3
+  8852.6ms (rmdir:55): removing directory /home/ssm-user/.local/share/pipx/venvs/boto3
+  8931.9ms (cli:924): PipxError: No apps associated with package boto3. Try again with '--include-deps' to include apps of dependent packages, which are listed above. If you
+are attempting to install a library, pipx should not be used. Consider using pip or a similar tool instead.
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/pipx/main.py", line 921, in cli
+    return run_pipx_command(parsed_pipx_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pipx/main.py", line 219, in run_pipx_command
+    return commands.install(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pipx/commands/install.py", line 100, in install
+    run_post_install_actions(
+  File "/usr/lib/python3/dist-packages/pipx/commands/common.py", line 427, in run_post_install_actions
+    raise PipxError(
+pipx.util.PipxError: No apps associated with package boto3. Try again with '--include-deps' to include apps of dependent packages, which are listed above. If you
+are attempting to install a library, pipx should not be used. Consider using pip or a similar tool instead.
+  8939.1ms (cli:932): pipx finished.
